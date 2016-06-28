@@ -1,0 +1,31 @@
+// Atoms
+//
+// If atoms are the basic building blocks of matter, then the atoms of
+// our interfaces serve as the foundational building blocks that
+// comprise all our user interfaces. Therefore these atoms would include
+// basic HTML tags like form labels, inputs, buttons, and other elements
+// that can’t be broken down any further without ceasing to be functional.
+//
+// @source - http://atomicdesign.bradfrost.com/chapter-2/
+
+h1 {
+    color: $white;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $hopbush;
+  width: rem(100);
+  height: rem(30);
+  color: $white;
+  border-radius: rem(16);
+  transition: all ease-in 0.3s;
+
+  @include hover{
+    background-color: $white;
+    color: $hopbush;
+  transition: all ease-in 0.2s;
+  }
+}
