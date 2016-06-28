@@ -151,6 +151,13 @@ gulp.task('js', function() {
       .pipe(concat('libs.js'))
       .pipe(gulp.dest(bases.dist + 'js'))
       .pipe(reload({stream:true}));
+
+    gulp.src([bases.app + 'js/api/*.js', '!' + bases.app + 'js/libs/modernizr.js'])
+      .pipe(uglify())
+      .pipe(size({ gzip: true, showFiles: true }))
+      .pipe(concat('api.js'))
+      .pipe(gulp.dest(bases.dist + 'js'))
+      .pipe(reload({stream:true}));
 });
 
 gulp.task('js-watch', ['js'], browserSync.reload);

@@ -23,19 +23,10 @@ if (pageRegex.test(window.location.href)) {
     });
 }
 
-;(function ($) {
-  'use strict';
-  var $body    = $('html, body'), // Define jQuery collection
-      content  = $('#page2').smoothState({
-        onStart : {
-          duration: 1000,
-          render: function () {
-            content.toggleAnimationClass('is-exiting');
+/* User Agent */
+// var UserAgent = UserAgentAPI();
+// console.log(UserAgent.data);
 
-            // Scroll user to the top
-            $body.animate({ 'scrollTop': 0 });
-
-          }
-        }
-      }).data('smoothState');
-})(jQuery);
+/* Country */
+// var country = CountryAPI();
+// console.log(country);
