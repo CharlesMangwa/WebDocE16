@@ -3,13 +3,6 @@
 <!--[if IE 9]>         <html class="no-js gt-ie9 ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js gt-ie9"> <!--<![endif]-->
   <head>
-    <!--
-
-      Description:
-      Version:
-      Author:
-
-    //-->
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -36,7 +29,7 @@
     <meta name="robots" content="all">
 
     <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
@@ -53,23 +46,163 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
     </head>
-  <body>
+    <body>
+      <section class="introduction">
+        <div class="center">
+          <h1>
+            Hello, Gorgeous!
+          </h1>
+          <p>
+            A jQuery plugin that, after scrolling, snaps to blocks of content which I like to call panels. You can actually nest sets of panels as you will see throughout this demo page.
+          </p>
+          <p>
+            Each following panel will explain a specific feature of the panelSnap plugin.
+          </p>
+        </div>
+        <div class="bottom">
+          Scroll down to see more.
+        </div>
+      </section>
+      
+      <section class="menu_demo">
+        <h1>
+          Menus
+        </h1>
+        <div class="menu">
+          <a href="" data-panel="first">
+            First panel
+          </a>
+          <a href="" data-panel="second" class="active">
+            Second panel
+          </a>
+          <a href="" data-panel="third">
+            Third panel
+          </a>
+        </div>
+        <div class="panels">
+          <section data-panel="first">
+            <h1>First</h1>
+          </section>
+          <section data-panel="second">
+            <h1>Second</h1>
+          </section>
+          <section data-panel="third">
+            <h1>Third</h1>
+          </section>
+        </div>
+      </section>
 
-    <!-- Add your site or application here -->
+      <section class="keyboard_demo">
+        <h1>
+          Keyboard
+        </h1>
+        <div class="panels">
+          <section>
+            <h1>First</h1>
+          </section>
+          <section>
+            <h1>Second</h1>
+          </section>
+          <section>
+            <h1>Third</h1>
+          </section>
+        </div>
+        <div class="log">
+          <h2>Try using the left & right keys to navigate through these panels.</h2>
+        </div>
+      </section>
 
-    <div id="index" class="animation">
-      <h1 class="animation_element animation_element--fadein">Hello, Gorgeous!</h1>
-      <a href="page2.html" class="animation_element animation_element--fadein">Next page</a>
-    </div>
+      <section class="button_demo">
+        <h1>
+          Next/Prev Buttons
+        </h1>
+        <div class="panels">
+          <section>
+            <h1>First</h1>
+          </section>
+          <section>
+            <h1>Second</h1>
+          </section>
+          <section>
+            <h1>Third</h1>
+          </section>
+        </div>
+        <div class="log">
+          <nav>
+            <a class="button prev">Previous</a>
+            <a class="button next">Next</a>
+          </nav>
+        </div>
+      </section>
 
-    <!-- SCRIPTS -->
-    <script src="http://l2.io/ip.js?var=ip_address"></script>
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script src="js/libs.js"></script>
-    <script src="js/api.js"></script>
-    <script src="/js/app.js"></script>
+      <section class="callback_demo">
+        <h1>
+          Callbacks
+        </h1>
+        <div class="panels">
+          <section>
+            <h1>First</h1>
+          </section>
+          <section>
+            <h1>Second</h1>
+          </section>
+          <section>
+            <h1>Third</h1>
+          </section>
+        </div>
+        <div class="log">
+          <h2>Log:</h2>
+        </div>
+      </section>
 
-    <!-- Google Analytics -->
+      <section class="event_demo">
+        <h1>
+          Events
+        </h1>
+        <div class="panels">
+          <section>
+            <h1>First</h1>
+          </section>
+          <section>
+            <h1>Second</h1>
+          </section>
+          <section>
+            <h1>Third</h1>
+          </section>
+        </div>
+        <div class="log">
+          <h2>Log:</h2>
+        </div>
+      </section>
 
-  </body>
+      <section class="offset_demo">
+        <h1>
+          Offset
+        </h1>
+        <div class="panels offset">
+          <header>First Section Header</header>
+          <section>
+            <h1>First</h1>
+          </section>
+          <header>Second Section Header</header>
+          <section>
+            <h1>Second</h1>
+          </section>
+          <header>Third Section Header</header>
+          <section>
+            <h1>Third</h1>
+          </section>
+        </div>
+      </section>
+
+      <!-- SCRIPTS -->
+      <script src="http://l2.io/ip.js?var=ip_address"></script>
+      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script src="js/libs.js"></script>
+      <script src="js/api.js"></script>
+      <script src="/js/app.js"></script>
+
+      <!-- Google Analytics -->
+
+    </body>
 </html>
