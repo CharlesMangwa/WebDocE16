@@ -137,24 +137,23 @@ gulp.task('deploy', function() {
     .pipe(deploy());
 });
 
-gulp.task('js-app', function() {
-  gulp.src(bases.app + 'js/*.js')
-    .pipe(uglify())
-    .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest(bases.dist + 'js'))
-    .pipe(reload({stream:true}));
+gulp.task('js', function() {
+    gulp.src(bases.app + 'js/*.js')
+      .pipe(uglify())
+      .pipe(size({ gzip: true, showFiles: true }))
+      .pipe(concat('app.js'))
+      .pipe(gulp.dest(bases.dist + 'js'))
+      .pipe(reload({stream:true}));
+
+    gulp.src([bases.app + 'js/libs/*.js', '!' + bases.app + 'js/libs/modernizr.js'])
+      .pipe(uglify())
+      .pipe(size({ gzip: true, showFiles: true }))
+      .pipe(concat('libs.js'))
+      .pipe(gulp.dest(bases.dist + 'js'))
+      .pipe(reload({stream:true}));
 });
 
-gulp.task('js-libs', function() {
-  gulp.src([bases.app + 'js/libs/*.js', '!' + bases.app + 'js/libs/modernizr.js'])
-    .pipe(uglify())
-    .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(concat('libs.js'))
-    .pipe(gulp.dest(bases.dist + 'js'))
-    .pipe(reload({stream:true}));
-});
-
+gulp.task('js-watch', ['js'], browserSync.reload);
 
 gulp.task('copy', function() {
 
@@ -195,7 +194,7 @@ gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
   gulp.watch(bases.app + './*.html', ['minify-html']);
   gulp.watch(bases.app + 'img/*', ['imagemin']);
-  gulp.watch(bases.app + 'js/*.js', ['js-app']);
+  gulp.watch(bases.app + "js/**/*.js", ['js-watch']);
 });
 
 gulp.task('imagemin', function() {
@@ -230,9 +229,9 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'copy', done);
+  runSequence('clean:dist', 'js', 'imagemin', 'minify-html', 'styles', 'copy', done);
 });
