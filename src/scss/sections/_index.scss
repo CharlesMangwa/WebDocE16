@@ -1,9 +1,3 @@
-// Smooth scroll
-
-#Rectangle-path {
-  fill: red;
-}
-
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -88,28 +82,46 @@ section.introduction {
     }
 
     .logo{
-      background-image: url('../img/logo-home.gif');
-      background-repeat: no-repeat;
-      background-size: 10px 10px;
-      background-position: left;
-      z-index: 9999;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    #mouse-wheel {
+      -webkit-animation: upanddown 2s infinite;
+    }
+
+    @keyframes upanddown {
+      0%{
+        transform: translateY(0px);
+      }
+      50%{
+        transform: translateY(7px);
+      }
+      100%{
+        transform: translateY(0px);
+      }
     }
 }
 section.introduction .center {
     display: table-cell;
     vertical-align: middle;
 }
-section.introduction .center p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 900px;
+section.introduction .center h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #5C5C5C;
+    font-size: 36px;
 }
 section.introduction .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     text-align: center;
     font-size: 60%;
 
@@ -119,7 +131,6 @@ section.introduction .bottom {
 }
 h1 {
     font-weight: inherit;
-    text-transform: uppercase;
     font-size: 2.5em;
     margin: 0;
 }
