@@ -26,21 +26,6 @@
   &:focus { @content; }
 }
 
-// Media Queries
-//
-// Allows you to use inline media queries. Includes options for `$fix-mqs`.
-//
-// $breakpoint - Desired breakpoint. Can be variable or unit.
-// $query - Defaults to `min-width`.
-// $type - Defaults to `screen`.
-
-@mixin mq($breakpoint, $query: 'min-width', $type: 'screen') {
-  @if $fix-mqs {
-    @if $fix-mqs >= $breakpoint { @content; }
-  } @else {
-    @media #{$type} and (#{$query}: #{$breakpoint}) { @content; }
-  }
-}
 
 /**
  * respond-to
@@ -48,19 +33,19 @@
  * @param {string} || {int} $breakpoint
  * @return {css}
  */
-@mixin respond-to($breakpoint){
+@mixin respond-to($breakpoint, $query: 'min-width'){
     @if type-of($breakpoint) == 'string' {
         @if map-has-key($breakpoints, $breakpoint) {
             $breakpoint : inspect(map-get($breakpoints, $breakpoint));
 
-            @media only screen and (min-width: $breakpoint) {
+            @media only screen and ($query: $breakpoint) {
                 @content;
             }
         }
         @else if map-has-key($breakpoints, $breakpoint) {
             $breakpoint : inspect(map-get($breakpoints, $breakpoint));
 
-            @media only screen and (min-width: $breakpoint) {
+            @media only screen and ($query: $breakpoint) {
                 @content;
             }
         }
@@ -69,7 +54,7 @@
         }
     }
     @else{
-        @media only screen and (min-width: $breakpoint) {
+        @media only screen and ($query: $breakpoint) {
             @content;
         }
     }

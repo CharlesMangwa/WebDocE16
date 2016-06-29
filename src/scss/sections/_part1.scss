@@ -1,0 +1,15 @@
+.part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: rem(10) solid $bouquet;
+}
+
+h1{
+    font-size: rem(20);
+    color: black;
+    @include respond-to('small', 'max-width' ) {
+        color: red;
+    };
+}

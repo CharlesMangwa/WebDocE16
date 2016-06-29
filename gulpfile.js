@@ -19,6 +19,7 @@ var gulp        = require('gulp'),
     del         = require('del'),
     vinylPaths  = require('vinyl-paths'),
     sourcemaps  = require('gulp-sourcemaps'),
+    surge = require('gulp-surge')
     colors      = require('colors'),
     sassdoc     = require('sassdoc'),
     // Temporary solution until gulp 4
@@ -248,3 +249,12 @@ gulp.task('default', function(done) {
 gulp.task('build', function(done) {
   runSequence('clean:dist', 'js', 'imagemin', 'minify-html', 'styles', 'copy', done);
 });
+
+// DEPLOY IN PROD
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: bases.dist,         // Path to your static build directory
+    domain: 'lithiumwars.surge.sh'  // Your domain or Surge subdomain
+  })
+})
