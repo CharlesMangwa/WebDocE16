@@ -182,6 +182,12 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 
+  // copy video files to dist directly
+  gulp.src([bases.app + 'videos/*.mp4'])
+    .pipe(size({ gzip: true, showFiles: true }))
+    .pipe(gulp.dest(bases.dist))
+    .pipe(reload({stream:true}));
+
 });
 
 gulp.task('sass-lint', function() {
