@@ -1,3 +1,16 @@
+window.onload = function () {
+  var animation_part1 = false;
+  var waypoints = $('section.part1').waypoint({
+    handler: function(direction) {
+      if(animation_part1 === false){
+        $('.title_part1').fadeIn(2000);
+        $('.title_part2').delay(5500).fadeIn(2000);
+        animation_part1 = true;
+      }
+    }
+  })
+}
+
 // Smooth Scroll
 jQuery(function($) {
 
@@ -74,18 +87,6 @@ jQuery(function($) {
 
   }
 
-});
-
-anime({
-  targets: '.title_part1',
-  scale: {
-    value: 2,
-    delay: function(el, index) {
-        return index * 80;
-    },
-    duration: 850,
-    easing: 'easeInOutExpo',
-  }
 });
 
 /* User Agent */
