@@ -176,7 +176,7 @@ section.partContainer .close-video{
     position: absolute;
     z-index: -1;
     top: rem(60);
-    right: rem(60);
+    right: rem(80);
     font-size: rem(25);
     font-family: 'GT Walsheim';
     color: white;
@@ -208,6 +208,14 @@ section.partContainer  video.background {
     section.partContainer .partContainer-content .partContainer-slide{
         padding-right: rem(70);
         border: rem(30) solid $red;
+
+        p {
+          line-height: 1.13;
+        }
+
+        #compare {
+          display: none;
+        }
     }
 
     section.partContainer .partContainer-content h2{

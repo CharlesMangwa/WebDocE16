@@ -56,5 +56,10 @@ section.part1{
         .title_part1, .title_part2 {
             margin: 20px;
         }
+
+        .title_part2 {
+          font-size: rem(45);
+          line-height: 1.24;
+        }
     }
 }

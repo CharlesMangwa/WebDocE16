@@ -18,7 +18,7 @@ window.onload = function () {
 
   $('#lithium').append(current_lithium);
 
-  // if(UserAgent.data.platform_type == 'Desktop'){
+  if(UserAgent.data.platform_type == 'Desktop'){
 
     jQuery(function($) {
       $('body').panelSnap();
@@ -70,19 +70,25 @@ window.onload = function () {
         }
       }
     })
-  // }else{
-  //   var animation_part1 = false;
-  //   var waypoints = $('section.part1').waypoint({
-  //     handler: function(direction) {
-  //       if((animation_part1 === false)&&(direction === 'down')){
-  //         $('.title_part1').fadeIn(2000);
-  //         $('.title_partContainer').delay(2000).fadeIn(2000);
-  //         animation_part1 = true;
-  //       }
-  //     },
-  //     offset: '50%'
-  //   })
-  // }
+  }else{
+    var animation_part1 = false;
+    var waypoints = $('section.part1').waypoint({
+      handler: function(direction) {
+        if((animation_part1 === false)&&(direction === 'down')){
+          $('.title_part1').fadeIn(2000);
+          $('.title_partContainer').delay(2000).fadeIn(2000);
+          animation_part1 = true;
+        }
+      },
+      offset: '50%'
+    })
+
+    // Add controls to all videos except the first one
+    var videos = document.querySelectorAll('video');
+    for(i=1; i<(videos.length - 1); i++){
+      videos[i].setAttribute("controls","");
+    }
+  }
 }
 
 // Distance between two points
