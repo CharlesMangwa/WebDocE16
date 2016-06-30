@@ -4,11 +4,29 @@ section.part1{
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: rem(10) solid $bouquet;
+    border: rem(20) solid $red;
 
     p{
+        font-family: 'GT Walsheim';
         display: none;
         font-size: rem(60);
         color: black;
+        margin-top: rem(20);
+    }
+}
+
+
+/******************************************/
+/************     MOBILE    ************/
+/******************************************/
+
+@include respond-to('small', 'max-width') {
+    section.part1{
+        border: rem(40) solid $red;
+
+        p{
+            font-size: rem(80);
+            margin-top: rem(60);
+        }
     }
 }

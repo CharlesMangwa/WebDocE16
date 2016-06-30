@@ -1,57 +1,32 @@
 /*
-*
-* ANIMATIONS
-*
-*/
-
-.animation {
-  /** Basic styles for an animated element */
-  .animation_element {
-    animation-duration: 0.75s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-
-  /** An element that fades in and slides up */
-  .animation_element--fadeinup {
-    animation-name: fadeInUp;
-  }
-
-  .animation_element--fadein {
-    animation-name: fadeIn;
-  }
-
-  &.is-exiting {
-      .scene_element {
-        animation-direction: alternate-reverse;
-      }
-  }
-}
-
-/*
-*
 * KEYFRAMES
-*
 */
 
-@keyframes fadeIn {
-  0% {
+@keyframes fadein {
+  0%{
     opacity: 0;
   }
-
-  100% {
+  100%{
     opacity: 1;
   }
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+.logo{
+  max-height: 300px;
+}
 
-  100% {
-    opacity: 1;
-    transform: none;
+#mouse-wheel {
+  -webkit-animation: upanddown 2s infinite;
+}
+
+@keyframes upanddown {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(7px);
+  }
+  100%{
+    transform: translateY(0px);
   }
 }

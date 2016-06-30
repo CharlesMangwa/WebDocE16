@@ -88,7 +88,7 @@ $font-family-default:         $font-family-sans;
 // Customs rules
 :root { font-size: calc(1vw + 1vh + .5vmin); }
 
-body { font: 1em/1.6rem; }
+body { font: 1em/1.6rem; position: relative;}
 
 
 /**

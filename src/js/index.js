@@ -96,3 +96,33 @@ jQuery(function($) {
 /* Country */
 // var country = CountryAPI();
 // console.log(country);
+
+
+
+
+
+
+
+/*
+*
+* SECTION 2
+*
+*/
+
+
+var video_part2 = document.querySelector('#background-video-section2');
+
+$( ".btn-vid-2" ).click(function() {
+    $( ".btn-vid-2" ).fadeOut( 300, function() {
+        $('.part2-content').hide("slide", { direction: "right" }, 350);
+        video_part2.play();
+        video_part2.muted = false;
+  });
+});
+
+$( ".cls-vd-2" ).click(function() {
+    $('.part2-content').show("slide", { direction: "right" }, 350);
+    video_part2.pause();
+    video_part2.muted = true;
+    $( ".btn-vid-2" ).fadeIn( 300, function() {});
+});

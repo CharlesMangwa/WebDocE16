@@ -204,6 +204,12 @@ gulp.task('minify-html', function() {
     .pipe(reload({stream:true}));
 });
 
+gulp.task('fonts', function() {
+  gulp.src(bases.app + 'fonts/*.{ttf,woff,woff2,eot,svg}')
+    .pipe(gulp.dest(bases.dist + 'fonts'))
+    .pipe(reload({stream:true}));
+});
+
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
   gulp.watch(bases.app + './*.html', ['minify-html']);
@@ -243,11 +249,11 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js', 'imagemin', 'minify-html', 'styles', 'themes', 'fonts', 'copy', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'js', 'imagemin', 'minify-html', 'styles', 'copy', done);
+  runSequence('clean:dist', 'js', 'imagemin', 'minify-html', 'styles', 'fonts', 'copy', done);
 });
 
 // DEPLOY IN PROD
