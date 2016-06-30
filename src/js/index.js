@@ -10,6 +10,13 @@ window.onload = function () {
     },
     offset: '50%'
   })
+  var waypoints = $('section.part2').waypoint({
+    handler: function(direction) {
+      if(direction === 'down'){
+        $('.part2-content').css('overflow-y', 'scroll');
+      }
+    }
+  })
 }
 
 // Smooth Scroll
