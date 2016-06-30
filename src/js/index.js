@@ -19,6 +19,13 @@ window.onload = function () {
   })
 }
 
+function replay_video(video_id){
+  var current_video = document.getElementById(video_id);
+  current_video.pause();
+  current_video.currentTime = '0';
+  current_video.play();
+}
+
 // Smooth Scroll
 jQuery(function($) {
 
@@ -36,16 +43,6 @@ jQuery(function($) {
       keys: {
         nextKey: 39,
         prevKey: 37,
-      }
-    }
-  });
-
-  // Button demo
-  $('.button_demo .panels').panelSnap({
-    navigation: {
-      buttons: {
-        $nextButton: $('.button.next'),
-        $prevButton: $('.button.prev'),
       }
     }
   });
