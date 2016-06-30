@@ -2,12 +2,13 @@ window.onload = function () {
   var animation_part1 = false;
   var waypoints = $('section.part1').waypoint({
     handler: function(direction) {
-      if(animation_part1 === false){
+      if((animation_part1 === false)&&(direction === 'down')){
         $('.title_part1').fadeIn(2000);
         $('.title_part2').delay(3500).fadeIn(2000);
         animation_part1 = true;
       }
-    }
+    },
+    offset: '50%'
   })
 }
 
