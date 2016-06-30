@@ -45,6 +45,12 @@ section.part2 .part2-content .part2-slide{
         }
         background-color: $grey-background;
     }
+
+    .replay-video {
+      display: inline;
+      float: right;
+      text-align: right;
+    }
 }
 
 /*
@@ -149,7 +155,7 @@ section.part2 .close-video{
     cursor: pointer;
 }
 
-section.part2  video {
+section.part2  video.background {
     min-width: 102vw;
     min-height: 102vh;
     z-index: -2;
@@ -163,7 +169,7 @@ section.part2  video {
 @include respond-to('small', 'max-width') {
     .button-video,
     .video-border,
-    video{
+    #background-video-section2{
         display: none;
     }
 

@@ -176,9 +176,3 @@ pre {
 * MOBILE
 *
 */
-
-@include respond-to('small', 'max-width') {
-    video {
-        display: none;
-    }
-}
