@@ -108,20 +108,3 @@ h2 {}
  */
 p {}
 span {}
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $hopbush;
-  width: rem(100);
-  height: rem(30);
-  color: $white;
-  border-radius: rem(16);
-  transition: all ease-in 0.3s;
-
-  @include hover{
-    background-color: $white;
-    color: $hopbush;
-  transition: all ease-in 0.2s;
-  }
-}

@@ -204,13 +204,87 @@ strong{
     display: none;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 1%;
     right: 0;
     width: rem(100);
     height: rem(100);
     cursor: pointer;
+
+    &.men-btn-close{
+        display: flex;
+    }
 }
 
+.menu-content{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.94);
+    // background-color: $red;
+}
+
+.menu-content div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-content a{
+    font-family: 'GT Walsheim';
+    font-size: rem(40);
+    color: rgba(0,0,0,0.60);
+    margin-top: rem(70);
+    transition: all ease-in-out 0.2s;
+
+    &:active{
+        &:before,
+        &:after{
+            content: ' - ';
+        }
+    }
+
+    @include hover{
+        &:before,
+        &:after{
+            content: ' - ';
+        }
+    }
+
+    &:nth-child(3){
+        @include hover{
+            color: $red;
+            transition: all ease 0.3s;
+        }
+    }
+
+    &:nth-child(4){
+        @include hover{
+            color: $yellow;
+            transition: all ease 0.3s;
+        }
+    }
+
+    &:nth-child(5){
+        @include hover{
+            color: $purple;
+            transition: all ease 0.3s;
+        }
+    }
+
+    &:nth-child(6){
+        @include hover{
+            color: $green;
+            transition: all ease 0.3s;
+        }
+    }
+}
 /*
 *
 * MOBILE

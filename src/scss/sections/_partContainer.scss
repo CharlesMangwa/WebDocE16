@@ -35,6 +35,8 @@ section.partContainer .partContainer-content .partContainer-slide{
     flex-direction: column;
     padding: rem(70) 0 0 rem(100);
 
+    p{width: 85%;}
+    
     b {
       font-weight: 600;
       color: $red;

@@ -50,13 +50,46 @@
 
     </head>
     <body>
-    <button class="menu-button men-btn">
+    <button class="menu-button men-btn-open">
         <svg width="53px" height="47px" viewBox="1363 22 53 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M1377.5,27.5 L1412,27.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
             <path d="M1371.5,44.5 L1412,44.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
             <path d="M1367,61.5 L1412,61.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
         </svg>
     </button>
+    <nav class="menu-content">
+        <button class="menu-button men-btn-close">
+            <svg width="47px" height="47px" viewBox="1366 18 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M1367,41.5 L1412,41.5" id="Line-Copy-2" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none" transform="translate(1389.500000, 41.500000) rotate(-45.000000) translate(-1389.500000, -41.500000) "></path>
+                <path d="M1373.5901,57.4099026 L1405.4099,25.5900974" id="Line-Copy-2" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none" transform="translate(1389.500000, 41.500000) scale(-1, 1) translate(-1389.500000, -41.500000) "></path>
+            </svg>
+        </button>
+        <div>
+            <svg width="186px" height="131px" viewBox="582 114 186 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <rect id="path-1" x="0" y="0" width="97.5645161" height="107"></rect>
+                    <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="97.5645161" height="107" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                </defs>
+                <g id="Li-Element" opacity="0.627273787" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(582.000000, 114.000000)">
+                    <text id="Li" font-family="Adelle Sans" font-size="70.6936459" font-weight="300" fill="#000000">
+                        <tspan x="20.7383513" y="77.8414097">Li</tspan>
+                    </text>
+                    <text id="wars" font-family="SN NeoNoire" font-size="47.1290973" font-weight="normal" fill="#000000">
+                        <tspan x="87.6666667" y="72.4096916">wa</tspan>
+                        <tspan x="87.6666667" y="120.409692">rs</tspan>
+                    </text>
+                    <use id="Rectangle-1" stroke="#000000" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                </g>
+            </svg>
+            <a href="#introduction" class="men-btn-close">QU’EST-CE QUE LE LITHIUM ?</a>
+            <a href="#provenance" class="men-btn-close">D’OÙ VIENT LE LITHIUM ?</a>
+            <a href="#reve" class="men-btn-close">LE RÊVE DE L’ÉLECTROMOBILITÉ</a>
+            <a href="#impasse" class="men-btn-close">L’IMPASSE</a>
+            <a href="#pistes" class="men-btn-close">LES PISTES</a>
+        </div>
+    </nav>
       <section class="introduction">
         <div class="video-overlay">
           <video id="background-video" poster="data:image/gif,AAAA" width="100%" autoplay muted loop>
@@ -82,12 +115,12 @@
               </g>
           </svg>
           <p>
-            Scroller pour<br>démarrer l'expérience
+            Scrollez pour<br>démarrer l'expérience
           </p>
         </div>
       </section>
       <!-- PART1 -->
-      <section class="part1">
+      <section class="part1" id="introduction">
         <p class="title_part1">
           Connaissez-vous le lithium ?
         </p>
@@ -97,28 +130,11 @@
         </p>
       </section>
       <!-- PART2 -->
-        <section class="partContainer part2">
+        <section class="partContainer part2" id="provenance">
             <div class="button-video btn-vid-2">
-                <svg width="114px" height="114px" viewBox="0 0 114 114" alt="Play video">
-                    <defs>
-                        <circle id="path-1" cx="50" cy="50" r="50"></circle>
-                        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-7" y="-7" width="114" height="114">
-                            <rect x="-7" y="-7" width="114" height="114" fill="white"></rect>
-                            <use xlink:href="#path-1" fill="black"></use>
-                        </mask>
-                    </defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Desktop-HD-Copy-10" transform="translate(-215.000000, -371.000000)">
-                            <g id="Group-3" transform="translate(222.000000, 378.000000)">
-                                <g id="noun_10584_cc" transform="translate(33.000000, 27.000000)" fill="#FFFFFF">
-                                    <g id="Group">
-                                        <polygon id="Shape" points="0 0 0 46 46 23"></polygon>
-                                    </g>
-                                </g>
-                                <use id="Oval-3" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="14" xlink:href="#path-1"></use>
-                            </g>
-                        </g>
-                    </g>
+                <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
                 </svg>
             </div>
             <section class="partContainer-content panel_container part2-content">
@@ -183,7 +199,7 @@
             </video>
         </section>
         <!-- PART3 -->
-        <section class="partContainer part3">
+        <section class="partContainer part3" id="reve">
             <div class="button-video btn-vid-3">
                 <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
                     <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
@@ -237,7 +253,7 @@
             </video>
         </section>
         <!-- PART4 -->
-        <section class="partContainer part4">
+        <section class="partContainer part4" id="impasse">
             <div class="button-video btn-vid-4">
                 <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
                     <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
@@ -285,12 +301,12 @@
             </div>
             <button class="close-video cls-vd-4">FERMER</button>
             <video id="background-video-section4" class="background" width="800" muted loop>
-                <source src="videos/home.mp4" type="video/mp4">
+                <source src="videos/ecologie.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </section>
         <!-- PART5 -->
-        <section class="partContainer part5">
+        <section class="partContainer part5" id="pistes">
             <div class="button-video btn-vid-5">
                 <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
                     <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\

@@ -249,7 +249,7 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js', 'imagemin', 'minify-html', 'styles', 'themes', 'fonts', 'copy', 'watch', done);
+  runSequence('clean:dist', 'js', 'imagemin', 'minify-html', 'styles', 'themes', 'fonts', 'copy', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {
