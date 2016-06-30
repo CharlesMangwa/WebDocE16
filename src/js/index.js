@@ -4,7 +4,7 @@ window.onload = function () {
     handler: function(direction) {
       if(animation_part1 === false){
         $('.title_part1').fadeIn(2000);
-        $('.title_part2').delay(5500).fadeIn(2000);
+        $('.title_part2').delay(3500).fadeIn(2000);
         animation_part1 = true;
       }
     }

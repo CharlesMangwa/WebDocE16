@@ -186,7 +186,7 @@ gulp.task('copy', function() {
   // copy video files to dist directly
   gulp.src([bases.app + 'videos/*.mp4'])
     .pipe(size({ gzip: true, showFiles: true }))
-    .pipe(gulp.dest(bases.dist))
+    .pipe(gulp.dest(bases.dist + 'videos'))
     .pipe(reload({stream:true}));
 
 });
