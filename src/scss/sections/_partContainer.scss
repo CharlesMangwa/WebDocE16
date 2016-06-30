@@ -114,6 +114,10 @@ section.partContainer .partContainer-content .partContainer-stats-1{
     video {
       max-width: 100%;
     }
+
+    #compare {
+      max-width: 50%;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-2{
@@ -125,6 +129,10 @@ section.partContainer .partContainer-content .partContainer-stats-2{
     align-self: center;
     margin: rem(0) auto rem(0) rem(110);
     padding-bottom: 70px;
+
+    #production {
+      padding-top: 50%;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-3{
@@ -136,6 +144,10 @@ section.partContainer .partContainer-content .partContainer-stats-3{
     justify-content: center;
     align-items: center;
     align-self: stretch;
+
+    #salt {
+      max-width: 100%;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-4{

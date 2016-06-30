@@ -59,7 +59,7 @@
     </button>
       <section class="introduction">
         <div class="video-overlay">
-          <video id="background-video" width="400" autoplay muted loop>
+          <video id="background-video" width="400" poster="data:image/gif,AAAA" autoplay muted loop>
             <source src="videos/home.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -126,15 +126,14 @@
                     <h2>D'où vient le lithium ?</h2>
                     <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde.</p>
                     <div class="partContainer-stats-1">
-                      <video id="map" src="videos/vs.mp4" autoplay></video>
+                      <video id="map" src="videos/vs.mp4" poster="data:image/gif,AAAA" autoplay loop></video>
                     </div>
                 </section>
                 <section class="partContainer-slide" data-panel="second">
                     <p>Le lithium nous provient majoritairement du Chili, d'Argentine, d’Australie et de Chine.</p>
                     <div class="partContainer-stats-2">
-                        <video id="map" src="videos/map.mp4" autoplay></video>
+                        <video id="map" src="videos/map.mp4" poster="data:image/gif,AAAA" autoplay loop></video>
                     </div>
-                    <a onclick="replay_video('map')" class="replay-video" alt="Rejouer la video">Rejouer</a>
                     <p>
                       Compte tenu de votre position, votre batterie a parcouru pas moins de <b><span id="distance"></span> km</b> avant d’arriver à vous.
                     </p>
@@ -144,12 +143,13 @@
                     <p>75% des ces réserves sont sous forme de sel de carbonate de lithium. Seuls19% de ce sel deviendront du lithium utile.
   La technique d’extraction la plus répandue se fait par l’évaporation de bassins de saumure salée. Un processus pouvant durer jusqu’à 2 ans.</p>
                     <div class="partContainer-stats-3">
+                      <video id="salt" src="videos/salt.mp4" poster="data:image/gif,AAAA" autoplay loop></video>
                     </div>
                 </section>
                 <section class="partContainer-slide" data-panel="fourth">
                     <p>Les quantités de Lithium extraites ont plus que doublées entre 2000 et 2015. En cause, une demande en explosion qui n’est pas prête de ralentir.</p>
                     <div class="partContainer-stats-2">
-                        <video id="production" src="videos/production.mp4" loop autoplay></video>
+                        <video id="production" src="videos/production.mp4" poster="data:image/gif,AAAA" loop autoplay></video>
                     </div>
                     <div class="scroll-down-icon">
                         <svg width="30px" height="110px" viewBox="1364 675 30 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -177,7 +177,7 @@
             </section>
             <div class="video-border"></div>
             <button class="close-video cls-vd-2">FERMER</button>
-            <video id="background-video-section2" class="background" width="800" muted loop>
+            <video id="background-video-section2" class="background" width="800" poster="data:image/gif,AAAA" muted loop>
                 <source src="videos/home.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -195,6 +195,7 @@
                     <h2>L’espoir d’un stockage démocratisé</h2>
                     <p>Dans une optique de transition aux énergies renouvelables, le stockage représente un enjeu majeur. La batterie Lithium-ion était pressentie comme la première solution efficace et rentable de stocker l’énergie électrique. Depuis l’arrivée d’acteurs comme Tesla, il semble que la conquête de l’électrique se soit entamée.&nbsp;<strong>La Gigafactory produira à elle seule plus de batteries chaque année qu’il en a été produit dans le monde en 2013.</strong></p>
                     <div class="partContainer-stats-1">
+                      <video id="compare" src="videos/compare.mp4" poster="data:image/gif,AAAA" autoplay loop></video>
                     </div>
                 </section>
                 <section class="partContainer-slide" data-panel="second">
@@ -230,7 +231,7 @@
             <div class="video-border">
             </div>
             <button class="close-video cls-vd-3">FERMER</button>
-            <video id="background-video-section3" class="background" width="1440" muted loop>
+            <video id="background-video-section3" class="background" width="1440" poster="data:image/gif,AAAA" muted loop>
                 <source src="videos/gigafactory.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -283,7 +284,7 @@
             <div class="video-border">
             </div>
             <button class="close-video cls-vd-4">FERMER</button>
-            <video id="background-video-section4" class="background" width="800" muted loop>
+            <video id="background-video-section4" class="background" width="800" poster="data:image/gif,AAAA" muted loop>
                 <source src="videos/home.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -314,87 +315,19 @@
             <div class="video-border">
             </div>
             <button class="close-video cls-vd-5">FERMER</button>
-            <video id="background-video-section5" class="background" width="800" muted loop>
+            <video id="background-video-section5" class="background" width="800" poster="data:image/gif,AAAA" muted loop>
                 <source src="videos/graphene.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </section>
-<!--
-      <section class="menu_demo">
-        <h1>
-          Menus
-        </h1>
-        <div class="menu">
-          <a href="" data-panel="first">
-            First panel
-          </a>
-          <a href="" data-panel="second" class="active">
-            Second panel
-          </a>
-          <a href="" data-panel="third">
-            Third panel
-          </a>
-        </div>
-        <div class="panels">
-          <section data-panel="first">
-            <h1>First</h1>
-          </section>
-          <section data-panel="second">
-            <h1>Second</h1>
-          </section>
-          <section data-panel="third">
-            <h1>Third</h1>
-          </section>
-        </div>
-      </section>
-
-      <section class="keyboard_demo">
-        <h1>
-          Keyboard
-        </h1>
-        <div class="panels">
-          <section>
-            <h1>First</h1>
-          </section>
-          <section>
-            <h1>Second</h1>
-          </section>
-          <section>
-            <h1>Third</h1>
-          </section>
-        </div>
-        <div class="log">
-          <h2>Try using the left & right keys to navigate through these panels.</h2>
-        </div>
-      </section>
-
-      <section class="callback_demo">
-        <h1>
-          Callbacks
-        </h1>
-        <div class="panels">
-          <section>
-            <h1>First</h1>
-          </section>
-          <section>
-            <h1>Second</h1>
-          </section>
-          <section>
-            <h1>Third</h1>
-          </section>
-        </div>
-        <div class="log">
-          <h2>Log:</h2>
-        </div>
-      </section> -->
 
       <!-- SCRIPTS -->
       <script src="http://l2.io/ip.js?var=ip_address"></script>
       <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="js/libs.js"></script>
       <script src="js/api.js"></script>
-      <script src="/js/app.js"></script>
+      <script src="js/app.js"></script>
 
       <!-- Google Analytics -->
 
