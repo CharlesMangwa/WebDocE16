@@ -18,7 +18,15 @@ window.onload = function () {
 
   $('#lithium').append(current_lithium);
 
-  if(UserAgent.data.platform_type == 'Desktop'){
+  if((UserAgent.data.platform_type == 'Desktop') || (UserAgent.data.platform_name == 'Android')){
+
+    if(UserAgent.data.platform_name == 'Android'){
+      // Add controls to all videos except the first one
+      var videos = document.querySelectorAll('video');
+      for(i=1; i<(videos.length - 1); i++){
+        videos[i].setAttribute("controls","");
+      }
+    }
 
     jQuery(function($) {
       $('body').panelSnap();
@@ -161,12 +169,6 @@ window.onload = function () {
       },
       offset: '50%'
     })
-
-    // Add controls to all videos except the first one
-    var videos = document.querySelectorAll('video');
-    for(i=1; i<(videos.length - 1); i++){
-      videos[i].setAttribute("controls","");
-    }
   }
 }
 
