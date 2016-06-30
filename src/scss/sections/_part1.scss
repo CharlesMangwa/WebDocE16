@@ -21,6 +21,10 @@ section.part1{
       margin-right: 25%;
       margin-left: 25%;
       line-height: 1.6;
+
+      b:not(:last-child){
+          color: $red;
+      }
     }
 
     p{
