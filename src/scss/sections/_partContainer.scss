@@ -203,6 +203,7 @@ section.partContainer  video.background {
     section.partContainer .partContainer-content{
         width: 100vw;
         left: 0;
+        overflow-y: scroll;
     }
 
     section.partContainer .partContainer-content .partContainer-slide{
