@@ -6,12 +6,32 @@ section.part1{
     background-color: white;
     border: rem(20) solid $red;
 
+    b {
+      font-family: 'Gill Sans';
+      font-weight: 600;
+    }
+
+    .title_part1 {
+      text-transform: uppercase;
+    }
+
+    .title_part2 {
+      font-size: rem(30);
+      margin-top: 80px;
+      margin-right: 25%;
+      margin-left: 25%;
+      line-height: 1.6;
+    }
+
     p{
         font-family: 'GT Walsheim';
         display: none;
         font-size: rem(60);
         color: black;
         margin-top: rem(20);
+    }
+    .text {
+      font-family: 'Gill Sans';
     }
 }
 
@@ -27,6 +47,10 @@ section.part1{
         p{
             font-size: rem(80);
             margin-top: rem(60);
+        }
+
+        .title_part1, .title_part2 {
+            margin: 20px;
         }
     }
 }

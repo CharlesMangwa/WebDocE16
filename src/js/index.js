@@ -29,8 +29,26 @@ function replay_video(video_id){
 // Smooth Scroll
 jQuery(function($) {
 
-  // Basic demo
   $('body').panelSnap();
+
+  var animation_part1 = false;
+  $('.part1').panelSnap({
+    onSnapFinish: function($target) {
+      console.log($target);
+      if(animation_part1 === false){
+        $('.title_part1').fadeIn(2000);
+        $('.title_part2').delay(3500).fadeIn(2000);
+        animation_part1 = true;
+      }
+    }
+  });
+
+  $('.part2').panelSnap({
+    onSnapFinish: function($target) {
+      console.log($target);
+      $('.part2-content').css('overflow-y', 'scroll');
+    }
+  });
 
   // Menu demo
   $('.menu_demo .panels').panelSnap({
@@ -49,19 +67,9 @@ jQuery(function($) {
 
   // Callback demo
   $('.callback_demo .panels').panelSnap({
-    onSnapStart: function($target) {
-
-      log('callback', 'onSnapStart', $target);
-
-    },
     onSnapFinish: function($target) {
 
       log('callback', 'onSnapFinish', $target);
-
-    },
-    onActivate: function($target) {
-
-      log('callback', 'onActivate', $target);
 
     }
   });
