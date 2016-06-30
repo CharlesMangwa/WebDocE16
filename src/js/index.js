@@ -24,49 +24,128 @@ window.onload = function () {
       $('body').panelSnap();
     });
 
-    var animation_part1 = false;
+    var animation_part1 = false,
+        videos;
+
     var waypoints = $('section.part1').waypoint({
       handler: function(direction) {
-        if((animation_part1 === false)&&(direction === 'down')){
+        if(animation_part1 === false){
           $('.title_part1').fadeIn(2000);
           $('.title_partContainer').delay(2000).fadeIn(2000);
           animation_part1 = true;
         }
         $('.part2-content').css('overflow-y', 'hidden');
+
+        // PAUSE
+        videos = document.querySelectorAll('section.introduction video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
+        }
+
+        videos = document.querySelectorAll('section.part2 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
+        }
       },
       offset: '50%'
     })
+
     var waypoints = $('section.part2').waypoint({
       handler: function(direction) {
-        if(direction === 'down'){
-          $('.part2-content').css('overflow-y', 'scroll');
-          $('.part3-content').css('overflow-y', 'hidden');
+        $('.part2-content').css('overflow-y', 'scroll');
+        $('.part3-content').css('overflow-y', 'hidden');
+
+        // PLAY
+        videos = document.querySelectorAll('section.part2 video');
+        for(i=0; i<videos.length; i++){
+          if(videos[i].className != 'background'){
+            videos[i].play();
+          }
+        }
+
+        // PAUSE
+        videos = document.querySelectorAll('section.part3 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
         }
       }
     })
+
     var waypoints = $('section.part3').waypoint({
       handler: function(direction) {
-        if(direction === 'down'){
-          $('.part2-content').css('overflow-y', 'hidden');
-          $('.part3-content').css('overflow-y', 'scroll');
-          $('.part4-content').css('overflow-y', 'hidden');
+        $('.part2-content').css('overflow-y', 'hidden');
+        $('.part3-content').css('overflow-y', 'scroll');
+        $('.part4-content').css('overflow-y', 'hidden');
+
+        // PLAY
+        videos = document.querySelectorAll('section.part3 video');
+        for(i=0; i<videos.length; i++){
+          if(videos[i].id != 'background-video'){
+            if(videos[i].className != 'background'){
+              videos[i].play();
+            }
+          }
+        }
+
+        // PAUSE
+        videos = document.querySelectorAll('section.part2 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
+        }
+
+        videos = document.querySelectorAll('section.part4 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
         }
       }
     })
+
     var waypoints = $('section.part4').waypoint({
       handler: function(direction) {
-        if(direction === 'down'){
-          $('.part3-content').css('overflow-y', 'hidden');
-          $('.part4-content').css('overflow-y', 'scroll');
-          $('.part5-content').css('overflow-y', 'hidden');
+        $('.part3-content').css('overflow-y', 'hidden');
+        $('.part4-content').css('overflow-y', 'scroll');
+        $('.part5-content').css('overflow-y', 'hidden');
+
+        // PLAY
+        videos = document.querySelectorAll('section.part4 video');
+        for(i=0; i<videos.length; i++){
+          if(videos[i].id != 'background-video'){
+            if(videos[i].className != 'background'){
+              videos[i].play();
+            }
+          }
+        }
+
+        // PAUSE
+        videos = document.querySelectorAll('section.part3 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
+        }
+
+        videos = document.querySelectorAll('section.part5 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
         }
       }
     })
+
     var waypoints = $('section.part5').waypoint({
       handler: function(direction) {
-        if(direction === 'down'){
-          $('.part4-content').css('overflow-y', 'hidden');
-          $('.part5-content').css('overflow-y', 'scroll');
+        $('.part4-content').css('overflow-y', 'hidden');
+        $('.part5-content').css('overflow-y', 'scroll');
+
+        // PLAY
+        videos = document.querySelectorAll('section.part5 video');
+        for(i=0; i<videos.length; i++){
+          if(videos[i].className != 'background'){
+            videos[i].play();
+          }
+        }
+
+        // PAUSE
+        videos = document.querySelectorAll('section.part4 video');
+        for(i=0; i<videos.length; i++){
+          videos[i].pause();
         }
       }
     })
@@ -74,7 +153,7 @@ window.onload = function () {
     var animation_part1 = false;
     var waypoints = $('section.part1').waypoint({
       handler: function(direction) {
-        if((animation_part1 === false)&&(direction === 'down')){
+        if(animation_part1 === false){
           $('.title_part1').fadeIn(2000);
           $('.title_partContainer').delay(2000).fadeIn(2000);
           animation_part1 = true;
