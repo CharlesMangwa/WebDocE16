@@ -26,6 +26,25 @@ function replay_video(video_id){
   current_video.play();
 }
 
+// Distance between two points
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1);
+  var a =
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ;
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
+
 // Smooth Scroll
 jQuery(function($) {
 
@@ -34,7 +53,6 @@ jQuery(function($) {
   var animation_part1 = false;
   $('.part1').panelSnap({
     onSnapFinish: function($target) {
-      console.log($target);
       if(animation_part1 === false){
         $('.title_part1').fadeIn(2000);
         $('.title_part2').delay(3500).fadeIn(2000);
@@ -45,7 +63,6 @@ jQuery(function($) {
 
   $('.part2').panelSnap({
     onSnapFinish: function($target) {
-      console.log($target);
       $('.part2-content').css('overflow-y', 'scroll');
     }
   });
@@ -114,8 +131,6 @@ var lithium = {
 
 var current_lithium = lithium[UserAgent.data.platform_name];
 
-console.log(typeof(current_lithium));
-
 if (typeof current_lithium == 'undefined') {
   current_lithium = 0.74;
 }
@@ -123,10 +138,31 @@ if (typeof current_lithium == 'undefined') {
 $('#lithium').append(current_lithium);
 
 /* Country */
-// var country = CountryAPI();
-// console.log(country);
+var country = CountryAPI();
+$.ajax({
+  url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + country.countryName,
+  success: function(result) {
+    $('#distance').append(getDistanceFromLatLonInKm(1.473292, -160.270608, result.results[0].geometry.location.lat, result.results[0].geometry.location.lng).toString().substring(0,8));
+  }
+});
 
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1);
+  var a =
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ;
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = R * c; // Distance in km
+  return d;
+}
 
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
 
 
 /*
