@@ -4,7 +4,7 @@
 *
 */
 
-section.part2 {
+section.partContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ section.part2 {
 *
 */
 
-section.part2 .part2-content{
+section.partContainer .partContainer-content{
     position: absolute;
     z-index: 0;
     top: 0; left: 30%;
@@ -28,7 +28,7 @@ section.part2 .part2-content{
     box-shadow: 0px -3px 15px 1px rgba(0, 0, 0, 0.49);
 }
 
-section.part2 .part2-content .part2-slide{
+section.partContainer .partContainer-content .partContainer-slide{
     height: 100%;
     width: 100%;
     display: flex;
@@ -47,19 +47,8 @@ section.part2 .part2-content .part2-slide{
         background-color: $grey-background;
     }
 
-    .part2-stats-2 video {
+    .partContainer-stats-2 video {
       max-width: 100%;
-    }
-
-    .replay-video {
-      color: $red;
-      background: none;
-      font-size: rem(25);
-
-      &:hover{
-        cursor: pointer;
-        text-decoration: underline;
-      }
     }
 }
 
@@ -69,7 +58,7 @@ section.part2 .part2-content .part2-slide{
 *
 */
 
-section.part2 .part2-content h2{
+section.partContainer .partContainer-content h2{
     font-family: 'GT Walsheim';
     font-size: rem(40);
     color: $grey-title;
@@ -77,7 +66,7 @@ section.part2 .part2-content h2{
     width: rem(300);
 }
 
-section.part2 .part2-content h2::after{
+section.partContainer .partContainer-content h2::after{
     content: '';
     display: flex;
     width: rem(43);
@@ -93,7 +82,7 @@ section.part2 .part2-content h2::after{
 *
 */
 
-section.part2 .part2-content p{
+section.partContainer .partContainer-content p{
     font-family: 'Gill Sans';
     font-size: rem(27);
     color: $grey-text;
@@ -107,7 +96,7 @@ section.part2 .part2-content p{
 *
 */
 
-section.part2 .part2-content .part2-stats-1{
+section.partContainer .partContainer-content .partContainer-stats-1{
     width: 90%;
     height: rem(190);
     margin-top: auto;
@@ -121,7 +110,7 @@ section.part2 .part2-content .part2-stats-1{
     }
 }
 
-section.part2 .part2-content .part2-stats-2{
+section.partContainer .partContainer-content .partContainer-stats-2{
     width: rem(715);
     height: rem(380);
     display: flex;
@@ -131,16 +120,22 @@ section.part2 .part2-content .part2-stats-2{
     margin: rem(150) auto rem(0) rem(110);
 }
 
-section.part2 .part2-content .part2-stats-3{
-    width: rem(730);
-    height: rem(130);
+section.partContainer .partContainer-content .partContainer-stats-3{
+    width: rem(800);
+    height: rem(165);
     margin-top: auto;
     margin-bottom: rem(135);
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: center;
-    background-color: $red;
+    align-self: stretch;
+}
+
+section.partContainer .partContainer-content .partContainer-stats-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 /*
@@ -149,7 +144,7 @@ section.part2 .part2-content .part2-stats-3{
 *
 */
 
-section.part2 .video-border{
+section.partContainer .video-border{
     position: absolute;
     z-index: -1;
     width: 97vw;
@@ -158,7 +153,7 @@ section.part2 .video-border{
     border: rem(15) solid white;
 }
 
-section.part2 .close-video{
+section.partContainer .close-video{
     position: absolute;
     z-index: -1;
     top: rem(60);
@@ -169,12 +164,11 @@ section.part2 .close-video{
     cursor: pointer;
 }
 
-section.part2  video.background {
+section.partContainer  video.background {
     min-width: 102vw;
     min-height: 102vh;
     z-index: -2;
 }
-
 
 /******************************************/
 /************     MOBILE    ************/
@@ -187,17 +181,17 @@ section.part2  video.background {
         display: none;
     }
 
-    section.part2 .part2-content{
+    section.partContainer .partContainer-content{
         width: 100vw;
         left: 0;
     }
 
-    section.part2 .part2-content .part2-slide{
+    section.partContainer .partContainer-content .partContainer-slide{
         padding-right: rem(70);
         border: rem(30) solid $red;
     }
 
-    section.part2 .part2-content h2{
+    section.partContainer .partContainer-content h2{
         font-family: 'GT Walsheim';
         font-size: rem(75);
         line-height: rem(84);
@@ -205,7 +199,7 @@ section.part2  video.background {
         width: 100%;
     }
 
-    section.part2 .part2-content h2::after{
+    section.partContainer .partContainer-content h2::after{
         content: '';
         display: flex;
         width: rem(130);
@@ -214,7 +208,7 @@ section.part2  video.background {
         margin-bottom: rem(90);
     }
 
-    section.part2 .part2-content p{
+    section.partContainer .partContainer-content p{
         font-family: 'Gill Sans';
         font-size: rem(60);
         color: $grey-text;
@@ -222,7 +216,7 @@ section.part2  video.background {
         width: 100%;
     }
 
-    section.part2 .part2-content .part2-stats-2{
+    section.partContainer .partContainer-content .partContainer-stats-2{
         margin: auto;
     }
 

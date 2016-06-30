@@ -126,6 +126,19 @@ a {
     border-bottom: 1px solid #ffffff;
     padding-bottom: 3px;
 }
+
+a.replay-video {
+  color: $red;
+  background: none;
+  font-size: rem(17);
+  align-self: flex-end;
+
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 img {
     max-width: 100%;
 }
@@ -176,6 +189,26 @@ pre {
     text-align: center;
 }
 
+.scroll-down-icon{
+    align-self: flex-end;
+    margin-right: rem(40);
+    margin-bottom: rem(25);
+}
+
+strong{
+    font-weight: bold;
+}
+
+.menu-button{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: rem(100);
+    height: rem(100);
+    cursor: pointer;
+}
 
 /*
 *

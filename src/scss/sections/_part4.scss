@@ -1,0 +1,13 @@
+/*
+*
+* TITLE
+*
+*/
+
+section.part4 .partContainer-content h2{
+    width: rem(430);
+}
+
+section.part4 .partContainer-content h2::after{
+    background-color: $purple;
+}

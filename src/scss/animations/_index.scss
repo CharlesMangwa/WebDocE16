@@ -1,3 +1,4 @@
+
 /*
 * KEYFRAMES
 */
@@ -15,7 +16,8 @@
   max-height: 300px;
 }
 
-#mouse-wheel {
+#mouse-wheel,
+#Path-A{
   -webkit-animation: upanddown 2s infinite;
 }
 

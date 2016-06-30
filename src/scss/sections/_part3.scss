@@ -1,0 +1,30 @@
+/*
+*
+* TITLE
+*
+*/
+
+section.part3 .partContainer-content h2{
+    width: rem(430);
+}
+
+section.part3 .partContainer-content h2::after{
+    background-color: $yellow;
+}
+
+/*
+*
+* FIGURES/STATS/MAPS
+*
+*/
+
+section.part3 .partContainer-content .partContainer-stats-1 {
+    border: thin solid $yellow;
+}
+
+section.part3 .partContainer-content .partContainer-stats-2 {
+    width: auto;
+    height: auto;
+    align-self: flex-start;
+    margin: 0 0 -2% -10%;
+}

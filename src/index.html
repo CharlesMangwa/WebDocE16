@@ -50,6 +50,13 @@
 
     </head>
     <body>
+    <button class="menu-button men-btn">
+        <svg width="53px" height="47px" viewBox="1363 22 53 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M1377.5,27.5 L1412,27.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
+            <path d="M1371.5,44.5 L1412,44.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
+            <path d="M1367,61.5 L1412,61.5" class="Menu-SVG" stroke="#D61441" stroke-width="7" stroke-linecap="square" fill="none"></path>
+        </svg>
+    </button>
       <section class="introduction">
         <div class="video-overlay">
           <video id="background-video" width="400" autoplay muted loop>
@@ -79,85 +86,174 @@
           </p>
         </div>
       </section>
+      <!-- PART1 -->
       <section class="part1">
         <p class="title_part1">
           Connaissez-vous le lithium ?
         </p>
-        <p class="text title_part2">
+        <p class=" title_partContainer text title_part2">
           Vous semblez utiliser un <b><span id="device"></span></b>. Tout comme de millions d’autres appareils, il fonctionne grâce à une batterie au Lithium. La vôtre en contient  <b><span id="lithium"></span>g</b>.<br>
-Devenu symbole de la mobilité électrique, le lithium à investi tous nos appareils nomades rechargeables depuis 2000.  Les experts prédisent depuis plusieurs années l’explosion de la demande d’un lithium certes disponible en quantités importantes, mais à quel prix ? L’énergie renouvelable se confrontrait-elle a la même impasse que celle du pétrole ?<br><b> Découvrez dans ce parcours les dessous de l’industrie florissante des batteries lithium-ion, ses promesses, et ce qu’elle ne dit pas.</b>
+        Devenu symbole de la mobilité électrique, le lithium à investi tous nos appareils nomades rechargeables depuis 2000.  Les experts prédisent depuis plusieurs années l’explosion de la demande d’un lithium certes disponible en quantités importantes, mais à quel prix ? L’énergie renouvelable se confrontrait-elle a la même impasse que celle du pétrole ?<br><b> Découvrez dans ce parcours les dessous de l’industrie florissante des batteries lithium-ion, ses promesses, et ce qu’elle ne dit pas.</b>
         </p>
       </section>
-      <section class="part2">
-          <div class="button-video btn-vid-2">
-              <!-- <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
-                  <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
-                  <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
-              </svg> -->
-              <svg width="114px" height="114px" viewBox="0 0 114 114" alt="Play video">
-                  <defs>
-                      <circle id="path-1" cx="50" cy="50" r="50"></circle>
-                      <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-7" y="-7" width="114" height="114">
-                          <rect x="-7" y="-7" width="114" height="114" fill="white"></rect>
-                          <use xlink:href="#path-1" fill="black"></use>
-                      </mask>
-                  </defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Desktop-HD-Copy-10" transform="translate(-215.000000, -371.000000)">
-                          <g id="Group-3" transform="translate(222.000000, 378.000000)">
-                              <g id="noun_10584_cc" transform="translate(33.000000, 27.000000)" fill="#FFFFFF">
-                                  <g id="Group">
-                                      <polygon id="Shape" points="0 0 0 46 46 23"></polygon>
-                                  </g>
-                              </g>
-                              <use id="Oval-3" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="14" xlink:href="#path-1"></use>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-          </div>
-          <section class="part2-content panel_container">
-              <section class="part2-slide" data-panel="first">
-                  <h2>D'où vient le lithium ?</h2>
-                  <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde.</p>
-                  <div class="part2-stats-1">
+      <!-- PART2 -->
+        <section class="partContainer part2">
+            <div class="button-video btn-vid-2">
+                <svg width="114px" height="114px" viewBox="0 0 114 114" alt="Play video">
+                    <defs>
+                        <circle id="path-1" cx="50" cy="50" r="50"></circle>
+                        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-7" y="-7" width="114" height="114">
+                            <rect x="-7" y="-7" width="114" height="114" fill="white"></rect>
+                            <use xlink:href="#path-1" fill="black"></use>
+                        </mask>
+                    </defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Desktop-HD-Copy-10" transform="translate(-215.000000, -371.000000)">
+                            <g id="Group-3" transform="translate(222.000000, 378.000000)">
+                                <g id="noun_10584_cc" transform="translate(33.000000, 27.000000)" fill="#FFFFFF">
+                                    <g id="Group">
+                                        <polygon id="Shape" points="0 0 0 46 46 23"></polygon>
+                                    </g>
+                                </g>
+                                <use id="Oval-3" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="14" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <section class="partContainer-content panel_container part2-content">
+                <section class="partContainer-slide" data-panel="first">
+                    <h2>D'où vient le lithium ?</h2>
+                    <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde.</p>
+                    <div class="partContainer-stats-1">
                       <video id="map" src="videos/vs.mp4" autoplay></video>
-                  </div>
-              </section>
-              <section class="part2-slide" data-panel="second">
-                  <p>Le lithium nous provient majoritairement du Chili, d'Argentine, d’Australie et de Chine.</p>
-                  <div class="part2-stats-2">
-                      <video id="map" src="videos/map.mp4" autoplay></video>
-                  </div>
-                  <a onclick="replay_video('map')" class="replay-video" alt="Rejouer la video">Rejouer</a>
-                  <p>
-                    Compte tenu de votre position, votre batterie a parcouru pas moins de XXXkm avant d’arriver à vous.
-                  </p>
-              </section>
-              <section class="part2-slide" data-panel="third">
-                  <h2>Une extraction compliquée</h2>
-                  <p>75% des ces réserves sont sous forme de sel de carbonate de lithium. Seuls19% de ce sel deviendront du lithium utile.
-La technique d’extraction la plus répandue se fait par l’évaporation de bassins de saumure salée. Un processus pouvant durer jusqu’à 2 ans.</p>
-                  <div class="part2-stats-3">
-                  </div>
-              </section>
-              <section class="part2-slide" data-panel="fourth">
-                  <p>Les quantités de Lithium extraites ont plus que doublées entre 2000 et 2015. En cause, une demande en explosion qui n’est pas prête de ralentir.</p>
-                  <div class="part2-stats-2">
-                      <video id="production" src="videos/production.mp4" loop autoplay></video>
-                  </div>
-              </section>
-          </section>
-          <div class="video-border">
-          </div>
-          <button class="close-video cls-vd-2">FERMER</button>
-          <video id="background-video-section2" class="background" width="800" muted loop>
-              <source src="videos/home.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-          </video>
-      </section>
+                    </div>
+                </section>
+                <section class="partContainer-slide" data-panel="second">
+                    <p>Le lithium nous provient majoritairement du Chili, d'Argentine, d’Australie et de Chine.</p>
+                    <div class="partContainer-stats-2">
+                        <video id="map" src="videos/map.mp4" autoplay></video>
+                    </div>
+                    <a onclick="replay_video('map')" class="replay-video" alt="Rejouer la video">Rejouer</a>
+                    <p>
+                      Compte tenu de votre position, votre batterie a parcouru pas moins de XXXkm avant d’arriver à vous.
+                    </p>
+                </section>
+                <section class="partContainer-slide" data-panel="third">
+                    <h2>Une extraction compliquée</h2>
+                    <p>75% des ces réserves sont sous forme de sel de carbonate de lithium. Seuls19% de ce sel deviendront du lithium utile.
+  La technique d’extraction la plus répandue se fait par l’évaporation de bassins de saumure salée. Un processus pouvant durer jusqu’à 2 ans.</p>
+                    <div class="partContainer-stats-3">
+                    </div>
+                </section>
+                <section class="partContainer-slide" data-panel="fourth">
+                    <p>Les quantités de Lithium extraites ont plus que doublées entre 2000 et 2015. En cause, une demande en explosion qui n’est pas prête de ralentir.</p>
+                    <div class="partContainer-stats-2">
+                        <video id="production" src="videos/production.mp4" loop autoplay></video>
+                    </div>
+                </section>
+            </section>
+            <div class="video-border"></div>
+            <button class="close-video cls-vd-2">FERMER</button>
+            <video id="background-video-section2" class="background" width="800" muted loop>
+                <source src="videos/home.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+        <!-- PART3 -->
+        <section class="partContainer part3">
+            <div class="button-video btn-vid-3">
+                <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
+                </svg>
+            </div>
+            <section class="partContainer-content panel_container part3-content">
+                <section class="partContainer-slide" data-panel="first">
+                    <h2>L’espoir d’un stockage démocratisé</h2>
+                    <p>Dans une optique de transition aux énergies renouvelables, le stockage représente un enjeu majeur. La batterie Lithium-ion était pressentie comme la première solution efficace et rentable de stocker l’énergie électrique. Depuis l’arrivée d’acteurs comme Tesla, il semble que la conquête de l’électrique se soit entamée.&nbsp;<strong>La Gigafactory produira à elle seule plus de batteries chaque année qu’il en a été produit dans le monde en 2013.</strong></p>
+                    <div class="partContainer-stats-1">
+                    </div>
+                </section>
+                <section class="partContainer-slide" data-panel="second">
+                    <h2>Le rêve de l’électromobilité</h2>
+                    <p>Ces avancées emballent les estimations et laisse espérer un passage massif à l’électrique dans les transports. D’ici 2030, les experts prédisent une production de XXX voitures totalement électriques, et donc un besoin en lithium tout aussi conséquent.</p>
+                    <div class="partContainer-stats-2">
+                        <img src="img/elon_musk.png" alt="Elon Musk">
+                    </div>
+                </section>
+            </section>
+            <div class="video-border">
+            </div>
+            <button class="close-video cls-vd-3">FERMER</button>
+            <video id="background-video-section3" class="background" width="1440" muted loop>
+                <source src="videos/home.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+        <!-- PART4 -->
+        <section class="partContainer part4">
+            <div class="button-video btn-vid-4">
+                <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
+                </svg>
+            </div>
+            <section class="partContainer-content panel_container part4-content">
+                <section class="partContainer-slide" data-panel="first">
+                    <h2>L’impasse écologique</h2>
+                    <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde. <strong>La Gigafactory produira à elle seule plus de batteries chaque année qu’il en a été produit dans le monde en 2013.</strong></p>
+                    <div class="partContainer-stats-1">
 
+                    </div>
+                </section>
+                <section class="partContainer-slide" data-panel="second">
+                    <h2>Le rêve de l’électromobilité</h2>
+                    <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde.</p>
+                    <div class="partContainer-stats-2">
+                    </div>w
+                </section>
+            </section>
+            <div class="video-border">
+            </div>
+            <button class="close-video cls-vd-4">FERMER</button>
+            <video id="background-video-section4" class="background" width="800" muted loop>
+                <source src="videos/home.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+        <!-- PART5 -->
+        <section class="partContainer part5">
+            <div class="button-video btn-vid-5">
+                <svg class="video-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="5" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
+                </svg>
+            </div>
+            <section class="partContainer-content panel_container part5-content">
+                <section class="partContainer-slide" data-panel="first">
+                    <h2>Les pistes pour le vrai durable</h2>
+                    <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde. <strong>La Gigafactory produira à elle seule plus de batteries chaque année qu’il en a été produit dans le monde en 2013.</strong></p>
+                    <div class="partContainer-stats-1">
 
+                    </div>
+                </section>
+                <section class="partContainer-slide" data-panel="second">
+                    <h2>Les promesses du graphène</h2>
+                    <p>Le lithium est un matériau aux quantités actuellement abondantes, mais pas infinies. On estime à 14 millions de tonnes les réserves disponibles en lithium dans le monde.</p>
+                    <div class="partContainer-stats-2">
+                    </div>
+                </section>
+            </section>
+            <div class="video-border">
+            </div>
+            <button class="close-video cls-vd-5">FERMER</button>
+            <video id="background-video-section5" class="background" width="800" muted loop>
+                <source src="videos/home.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+<!--
       <section class="menu_demo">
         <h1>
           Menus
@@ -224,7 +320,7 @@ La technique d’extraction la plus répandue se fait par l’évaporation de ba
         <div class="log">
           <h2>Log:</h2>
         </div>
-      </section>
+      </section> -->
 
       <!-- SCRIPTS -->
       <script src="http://l2.io/ip.js?var=ip_address"></script>
