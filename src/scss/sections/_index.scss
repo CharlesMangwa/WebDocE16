@@ -73,7 +73,7 @@ section.introduction {
 section.introduction .center {
     display: table-cell;
     vertical-align: middle;
-    transform: translateY(-15px);
+    transform: translateY(-60px);
 }
 section.introduction .center h1 {
     padding-top: 5px;
@@ -87,9 +87,18 @@ section.introduction .bottom {
     bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-align: center;
     font-size: 60%;
+
+    p {
+      padding-top: 15px;
+      font-family: 'GT Walsheim';
+      color: #5C5C5C;
+      text-transform: uppercase;
+      font-size: rem(20);
+      line-height: 1.4;
+    }
 
     img {
       padding-top: 10px;

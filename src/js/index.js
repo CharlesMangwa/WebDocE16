@@ -103,8 +103,24 @@ jQuery(function($) {
 });
 
 /* User Agent */
-// var UserAgent = UserAgentAPI();
-// console.log(UserAgent.data);
+var UserAgent = UserAgentAPI();
+$('#device').append(UserAgent.data.platform_name);
+
+var lithium = {
+  'Mac OSX El Capitan': 8,
+  'Android': 0.78,
+  'Apple iPhone': 0.84
+};
+
+var current_lithium = lithium[UserAgent.data.platform_name];
+
+console.log(typeof(current_lithium));
+
+if (typeof current_lithium == 'undefined') {
+  current_lithium = 0.74;
+}
+
+$('#lithium').append(current_lithium);
 
 /* Country */
 // var country = CountryAPI();
