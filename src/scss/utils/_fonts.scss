@@ -82,12 +82,12 @@
 
 @font-face {
 	font-family: 'SN NeoNoire';
-	src: url('SNNeoNoire-Regular.eot');
-	src: url('SNNeoNoire-Regular.eot?#iefix') format('embedded-opentype'),
-		url('SNNeoNoire-Regular.woff2') format('woff2'),
-		url('SNNeoNoire-Regular.woff') format('woff'),
-		url('SNNeoNoire-Regular.ttf') format('truetype'),
-		url('SNNeoNoire-Regular.svg#SNNeoNoire-Regular') format('svg');
+	src: url('../fonts/SNNeoNoire-Regular.eot');
+	src: url('../fonts/SNNeoNoire-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SNNeoNoire-Regular.woff2') format('woff2'),
+		url('../fonts/SNNeoNoire-Regular.woff') format('woff'),
+		url('../fonts/SNNeoNoire-Regular.ttf') format('truetype'),
+		url('../fonts/SNNeoNoire-Regular.svg#SNNeoNoire-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
