@@ -26,5 +26,9 @@ section.part5 .partContainer-content .partContainer-stats-2 {
     width: auto;
     height: auto;
     align-self: flex-start;
-    margin: 0 0 -2% -10%;
+    margin: 0 0 -5% -10%;
+
+    #compteur {
+      max-width: 90%;
+    }
 }
