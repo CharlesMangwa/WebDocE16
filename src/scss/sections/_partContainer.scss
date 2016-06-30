@@ -35,8 +35,14 @@ section.partContainer .partContainer-content .partContainer-slide{
     flex-direction: column;
     padding: rem(70) 0 0 rem(100);
 
-    p{width: 85%;}
-    
+    p{
+        width: 85%;
+
+        @include respond-to('small', 'max-width') {
+            width: 100%;
+        }
+    }
+
     b {
       font-weight: 600;
       color: $red;
@@ -219,6 +225,18 @@ section.partContainer  video.background {
         #compare {
           display: none;
         }
+    }
+
+    section.part3 .partContainer-content .partContainer-slide{
+        border: rem(30) solid $yellow;
+    }
+
+    section.part4 .partContainer-content .partContainer-slide{
+        border: rem(30) solid $purple;
+    }
+
+    section.part5 .partContainer-content .partContainer-slide{
+        border: rem(30) solid $green;
     }
 
     section.partContainer .partContainer-content h2{

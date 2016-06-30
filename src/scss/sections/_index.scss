@@ -194,6 +194,10 @@ pre {
     margin-top: auto;
     margin-right: rem(40);
     margin-bottom: rem(25);
+
+    @include respond-to('small', 'max-width'){
+        display: none;
+    }
 }
 
 strong{
@@ -212,6 +216,11 @@ strong{
 
     &.men-btn-close{
         display: flex;
+    }
+
+    @include respond-to('small', 'max-width'){
+        right: 4%;
+        transform: scale(0.7);
     }
 }
 
@@ -242,6 +251,11 @@ strong{
     color: rgba(0,0,0,0.60);
     margin-top: rem(70);
     transition: all ease-in-out 0.2s;
+
+    @include respond-to('small', 'max-width'){
+        font-size: rem(60);
+        margin-top: rem(80);
+    }
 
     &:active{
         &:before,
