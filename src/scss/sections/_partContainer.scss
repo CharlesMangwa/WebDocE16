@@ -161,6 +161,12 @@ section.partContainer .partContainer-content .partContainer-stats-2{
             margin-left: -15%;
             margin-bottom: -40%;
         }
+
+        @include respond-to('xlarge', 'max-width'){
+            transform: scale(0.8);
+            margin-left: -5%;
+            margin-bottom: -6%;
+        }
     }
 
     #compteur{
