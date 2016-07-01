@@ -261,6 +261,6 @@ gulp.task('build', function(done) {
 gulp.task('deploy', [], function () {
   return surge({
     project: bases.dist,         // Path to your static build directory
-    domain: 'lithiumwars.surge.sh'  // Your domain or Surge subdomain
+    domain: 'lithium-wars.surge.sh'  // Your domain or Surge subdomain
   })
 })

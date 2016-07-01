@@ -128,7 +128,7 @@ section.partContainer .partContainer-content .partContainer-stats-1{
     }
 
     #versus {
-      width: 900px;
+      width: 100%;
       z-index: -1;
       position: absolute;
       left: 0;
@@ -155,6 +155,12 @@ section.partContainer .partContainer-content .partContainer-stats-2{
         z-index: 1;
         bottom: 0;
         left: 0;
+
+        @include respond-to('small', 'max-width'){
+            transform: scale(0.7);
+            margin-left: -15%;
+            margin-bottom: -40%;
+        }
     }
 
     #compteur{
@@ -162,9 +168,9 @@ section.partContainer .partContainer-content .partContainer-stats-2{
     }
 
     #pipe {
-      width: 950px;
-      z-index: -1;
+      width: 100%;
       position: absolute;
+      z-index: -1;
       left: 0;
       bottom: 0;
     }
