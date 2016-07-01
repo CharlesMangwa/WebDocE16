@@ -126,6 +126,14 @@ section.partContainer .partContainer-content .partContainer-stats-1{
     #compare {
       max-width: 50%;
     }
+
+    #versus {
+      width: 900px;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-2{
