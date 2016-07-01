@@ -157,9 +157,7 @@ section.partContainer .partContainer-content .partContainer-stats-2{
         left: 0;
 
         @include respond-to('small', 'max-width'){
-            transform: scale(0.7);
-            margin-left: -15%;
-            margin-bottom: -40%;
+            display: none;
         }
 
         @include respond-to('xlarge', 'max-width'){
