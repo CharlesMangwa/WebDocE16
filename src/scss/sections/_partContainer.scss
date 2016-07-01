@@ -141,6 +141,17 @@ section.partContainer .partContainer-content .partContainer-stats-2{
     #production {
       padding-top: 50%;
     }
+
+    #elon{
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+    }
+
+    #compteur{
+        width: 70%;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-3{

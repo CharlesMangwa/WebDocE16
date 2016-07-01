@@ -21,7 +21,6 @@ window.onload = function() {
 
     // Features only for desktop and Android
     if ((UserAgent.data.platform_type == 'Desktop') || (UserAgent.data.platform_name == 'Android')) {
-
         if (UserAgent.data.platform_name == 'Android') {
             // Add controls to all videos except the first one
             var videos = document.querySelectorAll('video');
