@@ -160,6 +160,14 @@ section.partContainer .partContainer-content .partContainer-stats-2{
     #compteur{
         width: 70%;
     }
+
+    #pipe {
+      width: 950px;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
 }
 
 section.partContainer .partContainer-content .partContainer-stats-3{
